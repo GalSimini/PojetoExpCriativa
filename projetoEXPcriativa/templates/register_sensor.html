@@ -1,0 +1,26 @@
+{% extends"base.html" %}
+{% block content%}
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/registerSensor.css">
+        <script src="../static/js/main.js"></script>
+    <head/>
+    <body>
+        <div class="main-container">
+                <div class="box">
+                    <P>Cadastrar novo sensor</P>
+                    <form action = "http://localhost:8080/add_sensor" method = "post">
+                        <p>nome do Sensor:</p>
+                        <p><input type = "text" class="loguin-input" name = "sensor" placeholder="Sensor" required/></p>
+                        <p>Valor do sensor:</p>
+                        <p><input type = "text" class="loguin-input" name="valor" placeholder="Valor" required/></p>
+                        <p>Numero De Serie:</p>
+                        <p><input type = "text" class="loguin-input" name="numeroSerie" placeholder="Numero de serie" required/></p>
+                        <p><input type = "submit" class="login-button" onclick="cadastrou()" value = "Cadastrar" /></p>
+                    </form>
+                <div/>
+        </div>
+        
+    </body>
+</html>
+{% endblock%}

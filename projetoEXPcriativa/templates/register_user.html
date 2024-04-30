@@ -1,0 +1,24 @@
+{% extends"base.html" %}
+{% block content%}
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/registerUser.css">
+        <script src="../static/js/main.js"></script>
+    <head/>
+    <body>
+        <div class="main-container">
+            <div class="box">
+                <form action = "http://localhost:8080/add_user" method = "post">
+                    <p>Usuário:</p>
+                    <p><input type = "text" class="loguin-input" name = "user" placeholder="User" required/></p>
+                    <p>Senha:</p>
+                    <p><input type = "text" class="loguin-input" name="password" placeholder="Password" required/></p>
+                    <p>Email:</p>
+                    <p><input type = "text" class="loguin-input" name="email" placeholder="e-mail" required/></p>
+                    <p><input type = "submit" class="login-button" onclick="cadastrou()" value = "Cadastrar" /></p>
+                </form>
+            <div/>
+        <div/>
+    </body>
+</html>
+{% endblock%}
